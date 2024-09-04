@@ -33,3 +33,13 @@ function hoverHandler(event) {
 function unHoverHandler(event) {
   event.target.style.backgroundColor = "";
 }
+
+function buttonHandler() {
+  for (let i = 0; i < 5; i++) {
+    const btn = document.getElementById(`btn${i}`);
+    btn.onmouseover = hoverHandler;
+    btn.onmouseleave = unHoverHandler;
+  }
+}
+
+buttonHandler()
