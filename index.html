@@ -9,9 +9,45 @@
 </head>
 
 <body>
-  <div class="app"></div>
-  
+  <div class="app">
+    <h1>Quiz App</h1>
+
+    <div class="question">
+      Question<br>
+      <span id="question">What is HTML?</span>
+    </div>
+    <ul id="opt-btn" class="options">
+      <li><span>1</span>
+        <button id="btn0">1</button>
+      </li>
+
+      <li><span>2</span>
+        <button id="btn1">2</button>
+      </li>
+
+      <li><span>3</span>
+        <button id="btn2">3</button>
+      </li>
+
+      <li><span>4</span>
+        <button id="btn3">4</button>
+      </li>
+
+      <li><span>5</span>
+        <button id="btn4">5</button>
+      </li>
+    </ul>
+
+    <div id="score-card" class="score-card">
+      <p><span id="score">0</span></p>
+
+      <button id="reset-btn" class="reset-btn">Reset the Game</button>
+      <button id="next-btn" class="next-btn">Next</button>
+    </div>
+  </div>
+
   <script src="script.js" defer></script>
+
 </body>
 
 </html>
