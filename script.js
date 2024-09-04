@@ -43,14 +43,6 @@ function unHoverHandler(event) {
   event.target.style.backgroundColor = "";
 }
 
-function buttonHandler() {
-  for (let i = 0; i < 5; i++) {
-    const btn = document.getElementById(`btn${i}`);
-    btn.onmouseover = hoverHandler;
-    btn.onmouseleave = unHoverHandler;
-  }
-}
-
 function nextQuestion() {
   const question = document.getElementById("question");
   question.textContent = quiz[currentQuestion].question;
@@ -63,6 +55,28 @@ function nextQuestion() {
   answer = quiz[currentQuestion].answer;
   isScoreUpdated = false;
   currentScore.textContent = `Your score is ${score} out of ${quiz.length}`;
+}
+
+function answerHandler(event) {
+  const userAnswer = event.target.textContent;
+  if (userAnswer === answer) {
+    if (!isScoreUpdated) {
+      score++;
+      currentScore.textContent = `Your score is ${score} out of ${quiz.length}`;
+      isScoreUpdated = true;
+    }
+    alert("Correct!");
+  } else {
+    alert("Incorrect! Try Again.");
+  }
+}
+
+function buttonHandler() {
+  for (let i = 0; i < 5; i++) {
+    const btn = document.getElementById(`btn${i}`);
+    btn.onmouseover = hoverHandler;
+    btn.onmouseleave = unHoverHandler;
+  }
 }
 
 function nextBtnHandler() {
@@ -79,6 +93,10 @@ function nextBtnHandler() {
     };
   }
 }
+
+nextBtn.onclick = function () {
+  nextBtnHandler();
+};
 
 nextQuestion();
 buttonHandler()
