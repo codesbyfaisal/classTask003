@@ -51,4 +51,20 @@ function buttonHandler() {
   }
 }
 
+function nextQuestion() {
+  const question = document.getElementById("question");
+  question.textContent = quiz[currentQuestion].question;
+  for (let i = 0; i < 5; i++) {
+    const option = document.getElementById(`btn${i}`);
+    if (option) {
+      option.textContent = quiz[currentQuestion].options[i];
+    }
+  }
+  answer = quiz[currentQuestion].answer;
+  isScoreUpdated = false;
+  currentScore.textContent = `Your score is ${score} out of ${quiz.length}`;
+}
+
+
+nextQuestion();
 buttonHandler()
