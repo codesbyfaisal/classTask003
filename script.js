@@ -76,6 +76,7 @@ function buttonHandler() {
     const btn = document.getElementById(`btn${i}`);
     btn.onmouseover = hoverHandler;
     btn.onmouseleave = unHoverHandler;
+    btn.onclick = answerHandler;
   }
 }
 
@@ -91,6 +92,17 @@ function nextBtnHandler() {
     resetBtn.onclick = function () {
       location.reload();
     };
+  }
+}
+
+document.onkeydown = function (event) {
+  const key = event.key;
+  if (key >= 0 && key <= 5) {
+    document.getElementById(`btn${key}`).click();
+  }
+
+  if (key === "Enter" && nextBtn.style.display !== "none") {
+    nextBtnHandler();
   }
 }
 
