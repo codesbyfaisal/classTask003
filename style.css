@@ -13,5 +13,87 @@ body {
   display: flex;
   justify-content: center;
   color: #00001a;
+  font-size: larger;
   overflow-x: hidden;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #00001a8f;
+  padding: 0.4rem 1rem;
+  font-size: 1.1rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.app {
+  background-color: lavender;
+  padding: 2rem;
+  margin-top: 4rem;
+  width: 90vw;
+  min-width: 30rem;
+  max-width: 40rem;
+  text-align: center;
+}
+
+.question {
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.question span {
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  list-style: none;
+  width: 100%;
+}
+
+.options li {
+  flex-basis: calc(50% - 1rem);
+  position: relative;
+}
+
+.options span {
+  position: absolute;
+  top: -20%;
+  left: -5%;
+  background-color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-btn,
+.next-btn {
+  background-color: #00001a8f;
+  width: max-content;
+}
+
+.score-card {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset-btn {
+  display: none;
 }
