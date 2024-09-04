@@ -26,6 +26,15 @@ const quiz = [
   }
 ];
 
+const currentScore = document.getElementById("score");
+const nextBtn = document.getElementById('next-btn');
+const resetBtn = document.getElementById('reset-btn');
+
+let currentQuestion = 0;
+let score = 0;
+let answer = '';
+let isScoreUpdated = false;
+
 function hoverHandler(event) {
   event.target.style.backgroundColor = "#00001ac9";
 }
