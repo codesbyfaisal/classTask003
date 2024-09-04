@@ -65,6 +65,20 @@ function nextQuestion() {
   currentScore.textContent = `Your score is ${score} out of ${quiz.length}`;
 }
 
+function nextBtnHandler() {
+  if (currentQuestion < quiz.length - 1) {
+    currentQuestion++;
+    nextQuestion();
+  } else {
+    resetBtn.style.display = "block";
+    nextBtn.style.display = "none";
+    alert("Please reset the game to play again.");
+    currentScore.textContent = `Your score is ${score} out of ${quiz.length}`;
+    resetBtn.onclick = function () {
+      location.reload();
+    };
+  }
+}
 
 nextQuestion();
 buttonHandler()
