@@ -71,7 +71,7 @@ function answerHandler(event) {
   }
 }
 
-function buttonHandler() {
+function buttonHandlers() {
   for (let i = 0; i < 5; i++) {
     const btn = document.getElementById(`btn${i}`);
     btn.onmouseover = hoverHandler;
@@ -111,4 +111,4 @@ nextBtn.onclick = function () {
 };
 
 nextQuestion();
-buttonHandler()
+buttonHandlers();
