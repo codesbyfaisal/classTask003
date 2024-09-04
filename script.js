@@ -25,3 +25,11 @@ const quiz = [
     answer: "alt"
   }
 ];
+
+function hoverHandler(event) {
+  event.target.style.backgroundColor = "#00001ac9";
+}
+
+function unHoverHandler(event) {
+  event.target.style.backgroundColor = "";
+}
