@@ -25,3 +25,19 @@ const quiz = [
     answer: "alt"
   }
 ];
+
+let currentQuestion = 0;
+let score = 0;
+let answer;
+let isScoreUpdated = false;
+let isAnswerCorrect = false;
+let isAnswerIncorrect = false;
+let isQuizOver = false;
+let isAnswerSelected = false;
+let isNextBtnDisabled = true;
+
+const question = document.getElementById("question");
+const options = document.querySelectorAll(".options button");
+const scoreCard = document.getElementById("score");
+const nextBtn = document.getElementById("next-btn");
+const restartBtn = document.getElementById("restart-btn");
