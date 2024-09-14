@@ -21,21 +21,19 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #00001a8f;
-  padding: 0.4rem 1rem;
+  box-shadow: 0 0 1px 0 #00001a8f;
+  padding: 0.5rem 1rem;
   font-size: 1.1rem;
-  color: white;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .app {
   background-color: lavender;
   padding: 2rem;
   margin-top: 4rem;
-  width: 90vw;
-  min-width: 30rem;
-  max-width: 40rem;
+  width: 95vw;
+  max-width: 30rem;
   text-align: center;
 }
 
@@ -44,79 +42,16 @@ button {
   font-weight: bold;
 }
 
-.question span {
-  text-decoration: underline;
-  margin-left: 1rem;
-}
-
 .options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 1rem;
-  list-style: none;
-  width: 100%;
+  display: grid;
+  gap: 1rem;
 }
 
-.options li {
-  flex-basis: calc(50% - 1rem);
-  position: relative;
+button.correct{
+  background-color: green;
+  color: #f5f5f5;
 }
-
-.options span {
-  position: absolute;
-  top: -20%;
-  left: -5%;
-  background-color: white;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: block;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.reset-btn,
-.next-btn {
-  background-color: #00001a8f;
-  width: max-content;
-}
-
-.score-card {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.reset-btn {
-  display: none;
-}
-
-@media (max-width: 500px) {
-  .app {
-    padding: 1rem;
-    min-width: 100vw;
-  }
-
-  .options {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .options li {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-
-  .options span {
-    left: -1%;
-  }
-  
+button.incorrect{
+  background-color: rgba(177, 0, 0, 0.712);
+  color: #f5f5f5;
 }
